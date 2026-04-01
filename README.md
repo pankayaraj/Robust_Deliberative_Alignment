@@ -216,9 +216,20 @@ python evaluate_performance_MMLU_multi_generation_embedding_complex.py  --dir=re
 | Deepseek Distill R1 Qwen 32B |  [HF Link](https://huggingface.co/Pankayaraj/DA-GRPO-MODEL-Qwen2.5-0.5B-Instruct-DATASET-STAR-41K-DA-Filtered-DeepSeek-R1-Distill-Qwen-32B) | [HF Link](https://huggingface.co/Pankayaraj/DA-GRPO-MODEL-Qwen2.5-1.5B-Instruct-DATASET-STAR-41K-DA-Filtered-DeepSeek-R1-Distill-Qwen-32B) |  [HF Link](https://huggingface.co/Pankayaraj/DA-GRPO-MODEL-Llama-3.2-1B-Instruct-DATASET-STAR-41K-DA-Filtered-DeepSeek-R1-Distill-Qwen-32B) | [HF Link](https://huggingface.co/Pankayaraj/DA-GRPO-MODEL-gemma-3-1b-it-DATASET-STAR-41K-DA-Filtered-DeepSeek-R1-Distill-Qwen-32B) |
 
 
+
+### SFT Deepseek self improvement
+
+| Model | Link |
+|------------------|------------|
+| Deepseek R1 Distill Qwen 1.5B | [HF Link](https://huggingface.co/Pankayaraj/DA-SFT-MODEL-DeepSeekl-Qwen-1.5B-DATASET-STAR-41K-DA-Filtered-DeepSeek-R1-Distill-Qwen-1.5B) |
+| Deepseek R1 Distill Qwen 7B | [HF Link](https://huggingface.co/Pankayaraj/DA-SFT-MODEL-DeepSeekl-Qwen-7B-DATASET-STAR-41K-DA-Filtered-DeepSeek-R1-Distill-Qwen-7B) |
+| Deepseek R1 Distill Llama 8B | [HF Link](https://huggingface.co/Pankayaraj/DA-SFT-MODEL-DeepSeekl-Llama-8B-DATASET-STAR-41K-DA-Filtered-DeepSeek-R1-Distill-Llama-8B) |
+| Deepseek R1 Distill Qwen 14B | [HF Link](https://huggingface.co/Pankayaraj/DA-SFT-MODEL-DeepSeekl-Qwen-14B-DATASET-STAR-41K-DA-Filtered-DeepSeek-R1-Distill-Qwen-14B) |
+
+
 ---
 
-## Citation
+# Citation
 
 If you use the given datasets or work please cite us as 
 
