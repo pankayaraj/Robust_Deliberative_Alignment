@@ -11,7 +11,7 @@ This code base is the offical implementation of the work "Deliberative Alignment
 
 
 <p align="center">
-  <img src="DA_Robust.png" width="700">
+  <img src="DA_Robust.png" width="400">
 </p>
 
 ---
