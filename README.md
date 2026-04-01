@@ -1,3 +1,20 @@
+This code base is the offical implementation of the work "Deliberative Alignment is Deep, but Uncertainty Remains: Inference time safety improvement in reasoning via attribution of unsafe behavior to base model"
+
+
+<p align="center">
+<a href="">📚 Paper</a> &nbsp; | &nbsp;
+</p>
+
+---
+
+# Overview 
+
+
+<p align="center">
+  <img src="DA_Robust.png" width="700">
+</p>
+
+---
 # Virtual environment 
 
 ## Create a virtual environment and install requirements
