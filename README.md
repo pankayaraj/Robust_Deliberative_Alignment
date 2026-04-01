@@ -7,8 +7,8 @@ This code base is the offical implementation of the work "Deliberative Alignment
 <a href="">📚 Paper</a> &nbsp; | &nbsp;
 <a href="https://github.com/pankayaraj/Robust_Deliberative_Alignment?tab=readme-ov-file#sft-trained-deliberative-aligned-models">🤗 SFT Models </a> &nbsp; | &nbsp;
 <a href="https://github.com/pankayaraj/Robust_Deliberative_Alignment?tab=readme-ov-file#grpo-trained-deliberative-aligned-models">🤗 GRPO Models </a> &nbsp; | &nbsp;
-<a href="https://github.com/pankayaraj/Robust_Deliberative_Alignment?tab=readme-ov-file#reasoning-dataset-filtered">🗂️ Datasets</a>
-<a href="https://github.com/pankayaraj/Robust_Deliberative_Alignment?tab=readme-ov-file#citation">📜 Citation</a>
+<a href="https://github.com/pankayaraj/Robust_Deliberative_Alignment?tab=readme-ov-file#reasoning-dataset-filtered">🗂️ Datasets</a> &nbsp; | &nbsp;
+<a href="https://github.com/pankayaraj/Robust_Deliberative_Alignment?tab=readme-ov-file#citation">📜 Citation</a> &nbsp; | &nbsp;
 </p>
 
 
