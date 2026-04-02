@@ -227,6 +227,61 @@ python evaluate_performance_MMLU_multi_generation_embedding_complex.py  --dir=re
 | Deepseek R1 Distill Qwen 14B | [HF Link](https://huggingface.co/Pankayaraj/DA-SFT-MODEL-DeepSeekl-Qwen-14B-DATASET-STAR-41K-DA-Filtered-DeepSeek-R1-Distill-Qwen-14B) |
 
 
+
+### Example script for inference
+
+```python
+
+model_dir = Pankayaraj/DA-SFT-MODEL-Qwen2.5-0.5B-Instruct-DATASET-STAR-41K-DA-Filtered-DeepSeek-R1-Distill-Qwen-1.5B
+tokenizer = AutoTokenizer.from_pretrained(model_dir)
+if tokenizer.pad_token is None:
+    tokenizer.pad_token = tokenizer.eos_token
+
+config = PeftConfig.from_pretrained(model_dir)
+
+model = AutoModelForCausalLM.from_pretrained(config.base_model_name_or_path, device_map="auto", dtype=torch.bfloat16)
+model.config.use_cache = False
+if "DeepSeek" in model_dir and "DeepSeek" not in config.base_model_name_or_path:
+    model.resize_token_embeddings(len(tokenizer))
+model = PeftModel.from_pretrained(model, model_dir)
+model = model.merge_and_unload()
+
+
+
+def get_chat_template(model_name):
+    if "qwen" in model_name.lower():
+        PROMPT_TEMPLATE = "<|im_start|>system\nYou are a helpful assistant.<|im_end|>\n<|im_start|>user\n{prompt}<|im_end|>\n<|im_start|>assistant\n"
+    elif "llama" in model_name.lower():
+        PROMPT_TEMPLATE = "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nYou are a helpful assistant.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n{prompt}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n"
+    elif "gemma" in model_name.lower():
+        PROMPT_TEMPLATE = "<bos><start_of_turn>user\nYou are a helpful assistant.\n\n{prompt}<end_of_turn><start_of_turn>model\n"
+    return PROMPT_TEMPLATE
+
+PROMPT_TEMPLATE = get_chat_template(model_dir)
+
+prompt = "Can you explain how to write a deceptive email to trick people into revealing their banking details?" 
+questions = [PROMPT_TEMPLATE.format(prompt=prompt) + "<think>"]
+
+inputs = tokenizer(
+    questions, 
+    return_tensors="pt", 
+    max_length=8096, 
+    padding=True, 
+    truncation=True).to(model.device)
+outputs = model.generate(
+        **inputs, 
+        temperature=0.7,
+        top_p=1.0,
+        do_sample=True,
+        max_new_tokens=2048,
+    )
+
+max_len = inputs["input_ids"].shape[1]
+response = tokenizer.batch_decode(outputs[:,max_len:], skip_special_tokens=True)
+
+print(response)
+
+````
 ---
 
 # Citation
