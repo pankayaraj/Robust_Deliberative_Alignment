@@ -183,7 +183,7 @@ python evaluate_performance_MMLU_multi_generation_embedding_complex.py  --dir=re
 | Deepseek Distill R1 Qwen 14B | [HF Link](https://huggingface.co/datasets/Pankayaraj/STAR-41K-DA-Filtered-DeepSeek-R1-Distill-Qwen-14B) |
 | Deepseek Distill R1 Qwen 32B | [HF Link](https://huggingface.co/datasets/Pankayaraj/STAR-41K-DA-Filtered-DeepSeek-R1-Distill-Qwen-32B) |
 | Deepseek QwQ 32B | [HF Link](https://huggingface.co/datasets/Pankayaraj/STAR-41K-DA-Filtered-QwQ-32B) |
-| Deepseek Distill R1 Qwen 70B | [HF Link](https://huggingface.co/datasets/Pankayaraj/STAR-41K-DA-Filtered-DeepSeek-R1-Distill-Llama-70B) |
+| Deepseek Distill R1 Llama 70B | [HF Link](https://huggingface.co/datasets/Pankayaraj/STAR-41K-DA-Filtered-DeepSeek-R1-Distill-Llama-70B) |
 
 
 | Task type | Datset |
