@@ -149,7 +149,7 @@ python eval_multi_generation_self_base_certainity.py  --dir=results/YOUR_DIR --h
 
 ```
 
-### ASR amnd Utility computation
+### ASR amnd utility computation
 
 For embedding based safety computation
 ```
