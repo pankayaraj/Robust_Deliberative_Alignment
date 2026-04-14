@@ -288,5 +288,14 @@ print(response)
 
 If you use the given datasets or work please cite us as 
 
-```
+```bibtex
+@misc{pathmanathan2026deliberativealignmentdeepuncertainty,
+      title={Deliberative Alignment is Deep, but Uncertainty Remains: Inference time safety improvement in reasoning via attribution of unsafe behavior to base model}, 
+      author={Pankayaraj Pathmanathan and Furong Huang},
+      year={2026},
+      eprint={2604.09665},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2604.09665}, 
+}
 ```
